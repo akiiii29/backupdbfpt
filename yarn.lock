@@ -10127,7 +10127,7 @@ strapi-plugin-email@3.3.4:
     strapi-provider-email-sendmail "3.3.4"
     strapi-utils "3.3.4"
 
-strapi-plugin-graphql@3.3.4:
+strapi-plugin-graphql@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/strapi-plugin-graphql/-/strapi-plugin-graphql-3.3.4.tgz#66d729bf3aa4bcd0fdb7bbe164a5a08a889657ea"
   integrity sha512-kzuZoqr7vYlJy7R8Ug7eWPGYB4jgnNPVmZIKVPFVwhz7Hglye0e0W52CCnDCkGnsfYoqIV84oHlPK0Z8Gnsj4A==
