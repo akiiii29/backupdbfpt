@@ -9,7 +9,9 @@ module.exports = ({ env }) => ({
       },
       options: {
         useNullAsDefault: true,
-        ssl: true
+        ssl: true,
+        
+        
       },
     },
   },
