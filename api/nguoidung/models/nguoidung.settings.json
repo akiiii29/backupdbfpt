@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nguoidungs",
+  "info": {
+    "name": "nguoidung"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "TenNhanVien": {
+      "type": "string"
+    },
+    "MaNhanVien": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}
