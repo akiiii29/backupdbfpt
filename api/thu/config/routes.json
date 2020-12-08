@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/nguoidungs",
-      "handler": "nguoidung.find",
+      "path": "/thus",
+      "handler": "thu.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/nguoidungs/count",
-      "handler": "nguoidung.count",
+      "path": "/thus/count",
+      "handler": "thu.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/nguoidungs/:id",
-      "handler": "nguoidung.findOne",
+      "path": "/thus/:id",
+      "handler": "thu.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/nguoidungs",
-      "handler": "nguoidung.create",
+      "path": "/thus",
+      "handler": "thu.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/nguoidungs/:id",
-      "handler": "nguoidung.update",
+      "path": "/thus/:id",
+      "handler": "thu.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/nguoidungs/:id",
-      "handler": "nguoidung.delete",
+      "path": "/thus/:id",
+      "handler": "thu.delete",
       "config": {
         "policies": []
       }

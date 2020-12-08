@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "MaNhanVien": {
+      "type": "string"
+    },
+    "TenNhanVien": {
+      "type": "string"
+    },
+    "HinhAnh": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "DiaChi": {
+      "type": "string"
+    },
+    "ChucVu": {
+      "type": "enumeration",
+      "enum": [
+        "TruongPhong",
+        "PhoPhong",
+        "QuanLy",
+        "NhanVien",
+        "CongTacVien"
+      ]
+    },
+    "PhongBan": {
+      "type": "enumeration",
+      "enum": [
+        "GiamDoc",
+        "KyThuat",
+        "Maketting"
+      ]
+    },
+    "MucLuong": {
+      "type": "biginteger"
+    },
+    "NgaySinh": {
+      "type": "date"
+    },
+    "SoDienThoai": {
+      "type": "string"
+    },
+    "ho_so_du_ans": {
+      "collection": "ho-so-du-an",
+      "via": "users",
+      "dominant": true
+    },
+    "time_lines": {
+      "collection": "time-line",
+      "via": "ma_nhan_viens",
+      "dominant": true
+    }
+  }
+}

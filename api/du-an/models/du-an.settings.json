@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "du_ans",
+  "info": {
+    "name": "DuAn",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaDuAn": {
+      "type": "string"
+    },
+    "TenDuAn": {
+      "type": "string"
+    },
+    "BaoHanh": {
+      "type": "string"
+    },
+    "TrangThai": {
+      "type": "enumeration",
+      "enum": [
+        "DangDamPhan",
+        "DaNhan",
+        "DangLam",
+        "HoanThien"
+      ]
+    },
+    "GiaiDoan": {
+      "type": "enumeration",
+      "enum": [
+        "GiaiDoan1",
+        "GiaiDoan2",
+        "GiaiDoan3",
+        "GiaiDoan4"
+      ]
+    },
+    "ThoiGianBatDau": {
+      "type": "date"
+    },
+    "ThoiGianThucHien": {
+      "type": "date"
+    },
+    "BaoCao": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "timeLines": {
+      "collection": "time-line",
+      "via": "duAns"
+    },
+    "ho_so_hop_dong": {
+      "model": "ho-so-hop-dong",
+      "via": "du_an"
+    },
+    "khach_hang": {
+      "model": "khach-hang"
+    },
+    "nguoi_dam_nhan": {
+      "via": "du_an",
+      "model": "nguoi-dam-nhan"
+    },
+    "chis": {
+      "via": "duAn",
+      "collection": "chi"
+    },
+    "thus": {
+      "via": "duAn",
+      "collection": "thu"
+    }
+  }
+}

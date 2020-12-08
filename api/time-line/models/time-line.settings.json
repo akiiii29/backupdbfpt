@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_lines",
+  "info": {
+    "name": "TimeLine"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaTimeLine": {
+      "type": "string"
+    },
+    "TenTimeLine": {
+      "type": "string"
+    },
+    "NoiDung": {
+      "type": "text"
+    },
+    "ThoiGianThucHien": {
+      "type": "time"
+    },
+    "BaoCao": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ThoiGianBatDau": {
+      "type": "date"
+    },
+    "ThoiGianKetThuc": {
+      "type": "date"
+    },
+    "TinhTrang": {
+      "type": "enumeration",
+      "enum": [
+        "HoanThanh",
+        "DangLam",
+        "TamNgung"
+      ]
+    },
+    "duAns": {
+      "via": "timeLines",
+      "model": "du-an"
+    },
+    "ho_so_du_ans": {
+      "via": "timeLines",
+      "collection": "ho-so-du-an"
+    },
+    "ma_nhan_viens": {
+      "via": "time_lines",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

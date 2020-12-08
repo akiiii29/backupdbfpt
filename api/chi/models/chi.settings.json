@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chis",
+  "info": {
+    "name": "Chi",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaChi": {
+      "type": "string"
+    },
+    "LoaiChi": {
+      "type": "enumeration",
+      "enum": [
+        "Luong",
+        "ThietBi",
+        "Server",
+        "Khac"
+      ]
+    },
+    "Ten": {
+      "type": "string"
+    },
+    "NgayChi": {
+      "type": "date"
+    },
+    "GhiChu": {
+      "type": "text"
+    },
+    "Tien": {
+      "type": "biginteger",
+      "min": "1"
+    },
+    "duAn": {
+      "model": "du-an",
+      "via": "chis"
+    }
+  }
+}

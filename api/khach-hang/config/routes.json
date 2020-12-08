@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/khach-hangs",
+      "handler": "khach-hang.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/khach-hangs/count",
+      "handler": "khach-hang.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/khach-hangs/:id",
+      "handler": "khach-hang.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/khach-hangs",
+      "handler": "khach-hang.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/khach-hangs/:id",
+      "handler": "khach-hang.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/khach-hangs/:id",
+      "handler": "khach-hang.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

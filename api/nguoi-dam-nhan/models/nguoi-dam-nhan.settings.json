@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nguoi_dam_nhans",
+  "info": {
+    "name": "NguoiDamNhan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "LoaiCongViec": {
+      "type": "enumeration",
+      "enum": [
+        "Chinh",
+        "Phu",
+        "CongTac"
+      ]
+    },
+    "du_an": {
+      "model": "du-an",
+      "via": "nguoi_dam_nhan"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ho_so_du_ans",
+  "info": {
+    "name": "HoSoDuAn"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaHoSo": {
+      "type": "string"
+    },
+    "MoTaNgan": {
+      "type": "string"
+    },
+    "HoSo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "du_an": {
+      "model": "du-an"
+    },
+    "timeLines": {
+      "collection": "time-line",
+      "via": "ho_so_du_ans",
+      "dominant": true
+    },
+    "users": {
+      "via": "ho_so_du_ans",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

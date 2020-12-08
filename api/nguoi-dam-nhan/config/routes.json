@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nguoi-dam-nhans",
+      "handler": "nguoi-dam-nhan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nguoi-dam-nhans/count",
+      "handler": "nguoi-dam-nhan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nguoi-dam-nhans/:id",
+      "handler": "nguoi-dam-nhan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nguoi-dam-nhans",
+      "handler": "nguoi-dam-nhan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nguoi-dam-nhans/:id",
+      "handler": "nguoi-dam-nhan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nguoi-dam-nhans/:id",
+      "handler": "nguoi-dam-nhan.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

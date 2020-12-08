@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "khach_hangs",
+  "info": {
+    "name": "KhachHang",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaKhachHang": {
+      "type": "string"
+    },
+    "HoVaTen": {
+      "type": "string"
+    },
+    "HinhAnh": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "SoDienThoai": {
+      "type": "biginteger"
+    },
+    "NgaySinh": {
+      "type": "date"
+    },
+    "DiaChi": {
+      "type": "string"
+    },
+    "LoaiKhachHang": {
+      "type": "enumeration",
+      "enum": [
+        "Moi",
+        "Cu",
+        "ChuaCo"
+      ]
+    },
+    "ho_so_hop_dongs": {
+      "collection": "ho-so-hop-dong",
+      "via": "khach_hang"
+    },
+    "thus": {
+      "via": "khachHang",
+      "collection": "thu"
+    }
+  }
+}

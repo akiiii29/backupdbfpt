@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ho_so_hop_dongs",
+  "info": {
+    "name": "HoSoHopDong"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaHopDong": {
+      "type": "string"
+    },
+    "LoaiHoSo": {
+      "type": "enumeration",
+      "enum": [
+        "ThietKeWeb",
+        "QuangCao"
+      ]
+    },
+    "HopDong": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "du_an": {
+      "via": "ho_so_hop_dong",
+      "model": "du-an"
+    },
+    "khach_hang": {
+      "via": "ho_so_hop_dongs",
+      "model": "khach-hang"
+    }
+  }
+}

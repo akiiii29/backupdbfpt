@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "thus",
+  "info": {
+    "name": "Thu",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MaThu": {
+      "type": "string"
+    },
+    "LoaiThu": {
+      "type": "enumeration",
+      "enum": [
+        "BaoHiem",
+        "Hosting",
+        "Web",
+        "App"
+      ]
+    },
+    "Ten": {
+      "type": "string"
+    },
+    "NgayThu": {
+      "type": "date"
+    },
+    "GhiChu": {
+      "type": "text"
+    },
+    "tien": {
+      "type": "biginteger",
+      "min": "1"
+    },
+    "duAn": {
+      "model": "du-an",
+      "via": "thus"
+    },
+    "khachHang": {
+      "model": "khach-hang",
+      "via": "thus"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ho-so-du-ans",
+      "handler": "ho-so-du-an.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ho-so-du-ans/count",
+      "handler": "ho-so-du-an.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ho-so-du-ans/:id",
+      "handler": "ho-so-du-an.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ho-so-du-ans",
+      "handler": "ho-so-du-an.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ho-so-du-ans/:id",
+      "handler": "ho-so-du-an.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ho-so-du-ans/:id",
+      "handler": "ho-so-du-an.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

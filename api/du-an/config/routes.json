@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/du-ans",
+      "handler": "du-an.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/du-ans/count",
+      "handler": "du-an.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/du-ans/:id",
+      "handler": "du-an.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/du-ans",
+      "handler": "du-an.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/du-ans/:id",
+      "handler": "du-an.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/du-ans/:id",
+      "handler": "du-an.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
