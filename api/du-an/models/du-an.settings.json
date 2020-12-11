@@ -77,6 +77,10 @@
     "thus": {
       "via": "duAn",
       "collection": "thu"
+    },
+    "comments": {
+      "via": "du_an",
+      "collection": "comments"
     }
   }
 }

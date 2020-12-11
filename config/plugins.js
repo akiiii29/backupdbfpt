@@ -17,4 +17,14 @@ module.exports = ({ env }) => ({
     read: "secondaryPreferred"
       },
     },
+    email: {
+      provider: 'sendgrid',
+      providerOptions: {
+        apiKey: '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',
+      },
+      settings: {
+        defaultFrom: 'pedobear.oneq@gmail.com',
+        defaultReplyTo: 'pedobear.oneq@gmail.com',
+      },
+    },
 });

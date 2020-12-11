@@ -31,7 +31,7 @@
       "type": "password",
       "minLength": 6,
       "configurable": false,
-      "private": true
+      "private": false
     },
     "resetPasswordToken": {
       "type": "string",
@@ -115,6 +115,10 @@
       "collection": "time-line",
       "via": "ma_nhan_viens",
       "dominant": true
+    },
+    "comments": {
+      "via": "users_permissions_user",
+      "collection": "comments"
     }
   }
 }
